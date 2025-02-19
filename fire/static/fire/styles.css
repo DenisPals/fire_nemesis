@@ -15,6 +15,13 @@
     background-color: #fcdc74;
 }
 
+@media screen and (max-width: 992px) {
+
+    .service-card {
+        border: none;
+    }
+}
+
 
 .accordion{
     --bs-accordion-active-bg: #fcdc74bf;
@@ -36,3 +43,14 @@
 .form-control:focus {
     border-color: #fcdc74;
 }
+
+.faqBullets::marker {
+    color: #fcdc74;
+}
+
+.submit-Btn {
+    --bs-btn-bg: #face3f;
+    --bs-btn-hover-bg: #fcc40b;
+    border: none;
+}
+
