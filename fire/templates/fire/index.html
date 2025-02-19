@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'fire/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="{% static 'fire/script.js' %}"></script>
+
+    <title>Fire Nemesis</title>
+</head>
+<body>
+
+    <div class="container px-5" id="hero_1">
+        <div class="row flex-wrap-reverse flex-lg-wrap-reverse">
+          <div class="col-lg-6 pt-lg-5">
+            <h1 id="heroHeader" class="secondary_color">
+              <object type="image/svg+xml" class="me-2" data="{% static 'fire/images/fire_nemesis_logo.svg' %}" height="45"></object>
+              Fire Nemesis
+            </h1>
+            <h4 class="text-muted mt-2 col-11 col-xxl-8 fw-normal">innovative fire alarm solutions that protect, alert, and ensure safety.</h4>
+            <div class="text-muted fs-5 fw-medium mt-5">
+                <div class="hstack">
+                    <object type="image/svg+xml" class="me-2" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+                    <span>Fire Alarm Installation</span>
+                </div>
+                <div class="hstack">
+                    <object type="image/svg+xml" class="me-2" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+                    <span>Preventative Maintanance</span>
+                </div>
+                <div class="hstack">
+                    <object type="image/svg+xml" class="me-2" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+                    <span>Consultation</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mt-4">
+                            <hr>
+                            <span class="mt-5 fs-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FCDC74" class="bi bi-telephone me-2" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                  </svg>
+                                  0333 13456789
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+            <div class="mt-4">
+              <a href="#contactUs" id="heroBtn" class="btn btn-primary fw-semibold border-0 fs-4 shadow-sm">
+                <div class="hstack">
+                    <span>Get a Quote</span>
+                    <object type="image/svg+xml" id="cta_animation" class="ms-2" data="{% static 'fire/images/smoke_detector.svg' %}" height="30"></object>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6" id="heroAnimationColumn">
+            <object  type="image/svg+xml" data="{% static 'fire/images/fire_nemesis_welcome_animation_3.svg' %}"></object>
+          </div>
+        </div>
+        <div class="alert alert-warning text-center mt-4" role="alert">
+            <h5>Protect your business with our <strong><a class="text-decoration-none text-muted" href="#">Rapid Response Cover</a></strong> – fast, reliable fire alarm support when you need it most!</h5>
+        </div>
+    </div>
+    <div class="container mt-5 mt-lg-0 p-5">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-4 service-card border-top-0 border-start-0 border-bottom-0 border-end-3 rounded-0" data-toggle="modal">
+                <div class="card-body text-center">
+                  <a class="text-decoration-none" href="#">
+                    <span>
+                      <object type="image/svg+xml" id="webdev_animation" data="{% static 'fire/images/ctec_panel.svg' %}" height="120" class="mb-3 ms-2"></object>
+                    </span>
+                    <h5 class="card-title text-white mb-4"><span class="service-card-title px-3 pb-1 rounded-pill">Fire Alarm Systems</span></h5>
+                    <p class="card-text text-secondary fw-medium">
+                      We install, repair, and maintain fire alarm systems tailored to your safety needs.
+                    </p>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-4 service-card border-top-0 border-start-0 border-bottom-0 border-end-3 rounded-0 " data-toggle="modal">
+              <div class="card-body text-center">
+                <a class="text-decoration-none" href="#">
+                  <span>
+                    <object type="image/svg+xml" data="{% static 'fire/images/annual_inspection.svg' %}" height="120" class="mb-3 ms-2"></object>
+                  </span>
+                  <h5 class="card-title text-white mb-4"><span class="service-card-title px-3 pb-1 rounded-pill">Annual Inspection</span></h5>
+                  <p class="card-text text-secondary fw-medium">
+                    Annual inspections ensure your fire alarm system stays compliant, reliable, and ready for emergencies.
+                  </p>
+                </a>
+              </div>
+          </div>
+      </div>
+        <div class="col-md-8 offset-md-2 offset-lg-0 col-lg-4">
+            <div class="card mb-4 service-card border-0" data-toggle="modal">
+                <div class="card-body text-center">
+                  <a class="text-decoration-none" href="#">
+                    <span>
+                      <object type="image/svg+xml" id="webdev_animation" data="{% static 'fire/images/rapid_response_cover.svg' %}" height="120" class="mb-3 ms-2"></object>
+                    </span>
+                    <h5 class="card-title text-white mb-4"><span class="service-card-title px-3 pb-1 rounded-pill">Emergency Cover</span></h5>
+                    <p class="card-text text-secondary fw-medium">Rapid Response Cover guarantees emergency call-outs and repairs at no extra cost, ensuring your system stays operational.</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center my-lg-5 container">
+      <h1 style="color: #F6C758;" class="px-lg-4">Protect lives and property with reliable fire alarm solutions</h1>
+      <p class="px-5 fw-light fs-5">Our expert installation, maintenance, and repair services ensure your fire alarm system stays compliant, functional, and ready for emergencies.</p>
+    </div>
+    
+    
+    <div class="container mt-5 mt-lg-0 p-5">
+      <div class="row mb-5 text-center text-muted fs-5 fw-medium">
+        <div class="col-md-6 col-lg-4 ">
+            <img class="col-12 rounded-5" src="{% static 'fire/images/commercial.jpg' %}" alt="">
+            <span class="mt-3 hstack d-flex justify-content-center">
+              <object type="image/svg+xml" class="me-1" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+              Commercial
+            </span>
+        </div>  
+        <div class="col-md-6 col-lg-4">
+          <img class="col-12 rounded-5" src="{% static 'fire/images/residential.jpg' %}" alt="">
+          <span class="mt-3 hstack d-flex justify-content-center">
+            <object type="image/svg+xml" class="me-1" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+            Residential
+          </span>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <img class="col-12 rounded-5" src="{% static 'fire/images/institutional.jpg' %}" alt="">
+        <span class="mt-3 hstack d-flex justify-content-center">
+          <object type="image/svg+xml" class="me-1" data="{% static 'fire/images/check_icon.svg' %}" height="24"></object>
+          Institutional
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-md-5 py-5 container">
+    <div class="container px-md-5 mx-md-5">
+      <h3 class="mb-5 secondary_color">
+        Frequently Asked Questions
+      </h3>
+      <div class="text-center d-md-none vstack">
+        <span class="fs-5 text-secondary px-2">Got questions? Check out our FAQ section for quick answers about our fire alarm services.</span>
+        <a class="text-decoration-none fs-5 mt-2" style="color: #3c8ccc;" href="#">Explore Our FAQ</a>
+      </div>
+    </div>
+    <div class="accordion container d-none d-md-block px-md-5 px-3 ms-lg-4 me-5" id="FAQ">
+      
+      <div class="accordion-item mb-3 shadow-sm rounded-top-0">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <span class="text-secondary fs-5">What services does Fire Nemesis provide?</span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            Fire Nemesis specializes in:
+            <ul class="mt-3">
+              <li class="faqBullets">Fire alarm installation for commercial and residential buildings.</li>
+              <li class="faqBullets">Routine fire alarm maintenance and safety checks.</li>
+              <li class="faqBullets">Emergency callouts and fault repairs.</li>
+              <li class="faqBullets">Fire alarm system upgrades and compliance checks.</li>
+              <li class="faqBullets">24/7 monitoring and rapid response services.</li>
+            </ul>
+            Our goal is to ensure that your fire safety systems function flawlessly and remain compliant with UK fire safety regulations.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item mb-3 shadow-sm border-top">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <span class="text-secondary fs-5">What is the Fire Nemesis Rasponse Cover?</span>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            Our <strong>Rapid Response Cover</strong> is a subscription service for £45 per month. It includes:
+            <ul class="mt-3">
+              <li class="faqBullets">Unlimited emergency callouts at no extra cost.</li>
+              <li class="faqBullets">Priority response for urgent system faults.</li>
+              <li class="faqBullets">Free repairs for standard faults and minor component replacements.</li>
+              <li class="faqBullets">Regular maintenance and safety checks to ensure compliance.</li>
+            </ul>
+            This plan is designed to offer peace of mind, ensuring your fire alarm system is always operational without unexpected costs.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item mb-3 shadow-sm border-top">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <span class="text-secondary fs-5">How often should my fire alarm system be serviced?</span>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            UK fire safety regulations recommend that fire alarm systems be serviced **at least every six months** by a qualified technician. However, high-risk premises may require more frequent checks. Regular servicing ensures:
+            <ul class="mt-3">
+              <li class="faqBullets">Compliance with BS 5839 fire safety standards.</li>
+              <li class="faqBullets">Early detection of faults to prevent system failures.</li>
+              <li class="faqBullets">Extended lifespan of your fire alarm system.</li>
+            </ul>
+            Fire Nemesis offers flexible maintenance contracts to keep your system in top condition.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item mb-3 shadow-sm border-top">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <span class="text-secondary fs-5">Do you provide fire alarm system upgrades?</span>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            Yes! If your fire alarm system is outdated or no longer meets compliance standards, we can upgrade it with the latest technology. Upgrades may include:
+            <ul class="mt-3">
+              <li class="faqBullets">Replacing old control panels with smart fire alarm systems.</li>
+              <li class="faqBullets">Adding additional smoke detectors and heat sensors.</li>
+              <li class="faqBullets">Integrating remote monitoring and alarm notifications.</li>
+            </ul>
+            Contact us for a site assessment and upgrade consultation.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item mb-3 shadow-sm border-top">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <span class="text-secondary fs-5">How do I book a service or emergency callout?</span>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            Booking a service with Fire Nemesis is simple:
+            <ul class="mt-3">
+              <li class="faqBullets">Call our **24/7 emergency hotline** for urgent issues.</li>
+              <li class="faqBullets">Fill out our online booking form for routine maintenance.</li>
+              <li class="faqBullets">Email our support team for upgrade consultations.</li>
+            </ul>
+            We respond to emergency callouts within **4 hours**, ensuring rapid solutions to fire safety concerns.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="px-4 py-2 mt-lg-5 container mb-5" id="contactUs">
+    <div class="row my-5">
+      <div class="col-10 offset-1 offset-lg-0 col-lg-6">
+        <object type="image/svg+xml" data="{% static 'fire/images/fire_nemesis_map.svg' %}"></object>
+      </div>
+      <div class="col-lg-6">
+        <div class="pb-0 pt-1 px-4 px-lg-5 rounded-5" >
+          <h3 class="secondary_color mt-4 mt-lg-4 mb-5">Have questions or need a quote?<br> Send us a message!</h3>
+        <form id="index_contactForm" action="{% url 'index' %}" method="post" class="row g-3">
+          {% csrf_token %}
+          <div class="col-md-6">
+            <input type="text" class="form-control focus-ring focus-ring" name="name" id="name" placeholder="Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control focus-ring" name="email" id="email" placeholder="Email">
+          </div>
+          <div class="col-12">
+            <select class="form-select" id="subject">
+              <option selected>What topic?</option>
+              <option value="1">Fire Alarm Installation</option>
+              <option value="2">Repairs and/or Maintanance</option>
+              <option value="3">Rapid Response Cover</option>
+              <option value="4">Something else</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control focus-ring" name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-secondary w-100 fw-medium submit-Btn mt-lg-4 mb-4 g-recaptcha" data-sitekey="6LdnsVoqAAAAAMK34lJQ1U0SrNLeAvKAbaCj0Vim" data-callback='index_onSubmit' data-action='submit'>
+              Send Message  
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-send mb-1 ms-1" viewBox="0 0 16 16">
+                  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+              </svg> 
+            </button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-messageSent="{{messageSent}}">
+      <div class="toast-header">
+        <img src="{% static 'agency/images/contact_animation.svg' %}" height="40" class="rounded me-2">
+        <strong style="color: #fcdc74;" class="me-auto">Pals Interactive Media</strong>
+        <small>Just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Thank you for getting in touch! We’ll get back to you shortly.
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<footer class="pt-4 pt-md-5 pb-3 border-top container-fluid">
+  <div class="row mx-5">
+    <div class="col-12 col-md">
+      <small class="d-block mb-3 text-body-secondary">&copy; <span id="crYear">2024</span> Pals Interactive Media</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+    </div>
+  </div>
+</footer>
+</html>

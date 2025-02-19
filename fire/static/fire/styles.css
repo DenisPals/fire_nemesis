@@ -1,0 +1,38 @@
+
+.secondary_color{
+    color: #F6C758;
+}
+.accent{
+    color: #000080
+}
+
+#heroBtn {
+    --bs-btn-bg: #ffd063;
+    --bs-btn-hover-bg: #3c8ccc;
+}
+
+#logo, .service-card-title{
+    background-color: #fcdc74;
+}
+
+
+.accordion{
+    --bs-accordion-active-bg: #fcdc74bf;
+    --bs-accordion-active-color: #0079dd;
+    --bs-focus-ring-color: #fcdc74;
+}
+
+.custom-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F6C758'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.custom-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F6C758'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.form-control {
+    --bs-focus-ring-color: #fcdc74;
+}
+.form-control:focus {
+    border-color: #fcdc74;
+}
