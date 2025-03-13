@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Message Sent Toast
+    const toastLiveExample = document.getElementById('liveToast')
+    const status = toastLiveExample.getAttribute('data-messageSent')
+
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    if (status != 'False') {
+        toastBootstrap.show()
+    }
+
     window.addEventListener('load', (event) => {
         //Hero CTA animation
         const cta_animation = document.getElementById('cta_animation');

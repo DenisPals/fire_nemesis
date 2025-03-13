@@ -15,6 +15,21 @@
 </head>
 <body>
 
+  {% if notSent %}
+  <div class="container mt-5">
+    <div class="alert alert-danger shadow text-center alert-dismissible fade show" role="alert">
+      <h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill mb-1" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg>
+        We’re sorry, but it looks like your message could not be delivered at this time.
+      </h5>
+      <span class="fw-medium">Please check your details and try again. If the issue persists, you can reach out to us directly at <a class="text-decoration-none" href="mailto:enquiries@fire-nemesis.com">enquiries@fire-nemesis.com</a> for assistance.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  {% endif %}
+
     <div class="container px-5" id="hero_1">
         <div class="row flex-wrap-reverse flex-lg-wrap-reverse">
           <div class="col-lg-6 pt-lg-5">
@@ -268,22 +283,22 @@
         <form id="index_contactForm" action="{% url 'index' %}" method="post" class="row g-3">
           {% csrf_token %}
           <div class="col-md-6">
-            <input type="text" class="form-control focus-ring focus-ring" name="name" id="name" placeholder="Name">
+            <input type="text" class="form-control focus-ring focus-ring" name="name" id="name" placeholder="Name"required>
           </div>
           <div class="col-md-6">
-            <input type="email" class="form-control focus-ring" name="email" id="email" placeholder="Email">
+            <input type="email" class="form-control focus-ring" name="email" id="email" placeholder="Email" required>
           </div>
           <div class="col-12">
-            <select class="form-select" id="subject">
-              <option selected>What topic?</option>
-              <option value="1">Fire Alarm Installation</option>
-              <option value="2">Repairs and/or Maintanance</option>
-              <option value="3">Rapid Response Cover</option>
-              <option value="4">Something else</option>
+            <select class="form-select" id="subject" name="subject" required>
+              <option selected value="">What topic?</option>
+              <option value="Fire Alarm Installation">Fire Alarm Installation</option>
+              <option value="Repairs and/or Maintanance">Repairs and/or Maintanance</option>
+              <option value="Rapid Response Cover">Rapid Response Cover</option>
+              <option value="Something else">Something else</option>
             </select>
           </div>
           <div class="col-12">
-            <textarea class="form-control focus-ring" name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+            <textarea class="form-control focus-ring" name="message" id="message" cols="30" rows="8" placeholder="Message" required></textarea>
           </div>
           <div class="col-12">
             <button type="submit" class="btn btn-secondary w-100 fw-medium submit-Btn mt-lg-4 mb-4 g-recaptcha" data-sitekey="6LdnsVoqAAAAAMK34lJQ1U0SrNLeAvKAbaCj0Vim" data-callback='index_onSubmit' data-action='submit'>
@@ -302,8 +317,8 @@
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-messageSent="{{messageSent}}">
       <div class="toast-header">
-        <img src="{% static 'agency/images/contact_animation.svg' %}" height="40" class="rounded me-2">
-        <strong style="color: #fcdc74;" class="me-auto">Pals Interactive Media</strong>
+        <img src="{% static 'fire/images/contact_animation.svg' %}" height="40" class="rounded me-2">
+        <strong style="color: #fcdc74;" class="me-auto">Fire Nemesis</strong>
         <small>Just now</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
