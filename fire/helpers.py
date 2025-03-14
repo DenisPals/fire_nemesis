@@ -5,7 +5,7 @@ import base64
 from email.message import EmailMessage
 from googleapiclient.errors import HttpError
 import google.auth  
-import requests
+import json, os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
@@ -18,12 +18,15 @@ def gmail_send_message(**kwargs):
         # Following kwargs required
         # intent, subject, gmail_email, message_content, recipient
 
-        SERVICE_ACCOUNT_FILE = 'service_account_emailSystem.json'
-        credentials = service_account.Credentials.from_service_account_file(
-            filename=SERVICE_ACCOUNT_FILE,
-            scopes=['https://mail.google.com/'],
-            subject='noreply@fire-nemesis.com'
-        )
+        # SERVICE_ACCOUNT_FILE = 'fire_nemesis_mailService'
+        # credentials = service_account.Credentials.from_service_account_file(
+        #     filename=SERVICE_ACCOUNT_FILE,
+        #     scopes=['https://mail.google.com/'],
+        #     subject='noreply@fire-nemesis.com'
+        # )
+
+        service_account_info = json.loads(os.environ['SERVICE_ACCOUNT_KEY'])
+        credentials = service_account.Credentials.from_service_account_info(service_account_info)
 
         if kwargs['intent'] == 'sendMessageToDenis':
           
