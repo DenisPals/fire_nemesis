@@ -28,6 +28,9 @@ def gmail_send_message(**kwargs):
         service_account_info = json.loads(os.environ['SERVICE_ACCOUNT_KEY'])
         credentials = service_account.Credentials.from_service_account_info(service_account_info)
 
+        credentials = credentials.with_scopes(['https://mail.google.com/'])
+        credentials = credentials.with_subject('noreply@fire-nemesis.com')
+
         if kwargs['intent'] == 'sendMessageToDenis':
           
           try:

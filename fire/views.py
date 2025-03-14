@@ -6,8 +6,14 @@ PHONE_NUMBER = '0330 223 7058'
 
 # Create your views here.
 def index(request):
+
     service_account_info = json.loads(os.environ['SERVICE_ACCOUNT_KEY'])
-    print(f'CUSTOME MESSAGE: {service_account_info}')
+    credentials = service_account.Credentials.from_service_account_info(service_account_info)
+
+    credentials = credentials.with_scopes(['https://mail.google.com/'])
+    credentials = credentials.with_subject('noreply@fire-nemesis.com')
+    print(f'MY CUSTOM CODE: {credentials}')
+
     if request.method == 'POST':
 
         name = request.POST['name']
