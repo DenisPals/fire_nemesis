@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from .helpers import *
+import os, json
 
 PHONE_NUMBER = '0330 223 7058'
 
 # Create your views here.
 def index(request):
+    service_account_info = json.loads(os.environ['SERVICE_ACCOUNT_KEY'])
+    print(f'CUSTOME MESSAGE: {service_account_info}')
     if request.method == 'POST':
 
         name = request.POST['name']
